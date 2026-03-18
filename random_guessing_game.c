@@ -15,14 +15,14 @@ int main(int argc, char const *argv[])
 
     printf("=== GUESSING NUMBER GAME ===\n");
     
-    while (isTrue == false) {
+    while (!isTrue) {
         printf("Guess the number in 1-100: ");
         scanf("%d", &guess);
 
         if (guess > randomNumber) {
-            printf("To high\n");
+            printf("Too high\n");
         } else if (guess < randomNumber) {
-            printf("To low\n");
+            printf("Too low\n");
         } else {
             printf("Correct\n");
             isTrue = true;
